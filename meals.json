@@ -1,0 +1,368 @@
+{
+  "meals": [
+    {
+      "id": 1,
+      "name": "Masala Dosa",
+      "category": "breakfast",
+      "diet": "vegetarian",
+      "ingredients": ["Rice", "Lentils", "Potatoes", "Spices"],
+      "image": "https://i.pinimg.com/736x/e8/dc/7f/e8dc7f0b59b8602ba30621dee3c6291c.jpg",
+      "nutrition": {
+        "calories": 350,
+        "protein": 8,
+        "carbs": 55,
+        "fats": 10
+      }
+    },
+    {
+      "id": 2,
+      "name": "Chana Masala",
+      "category": "lunch",
+      "diet": "vegetarian",
+      "ingredients": ["Chickpeas", "Tomatoes", "Onions", "Spices"],
+      "image": "https://www.seriouseats.com/thmb/2KtHVPso7I68piUvR0501CjHJyY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__images__2016__03__20160328-channa-masala-recipe-8-2ab6195d55ae4068a8c1d36d7371f5f7.jpg",
+      "nutrition": {
+        "calories": 450,
+        "protein": 15,
+        "carbs": 60,
+        "fats": 12
+      }
+    },
+    {
+      "id": 3,
+      "name": "Palak Paneer",
+      "category": "dinner",
+      "diet": "vegetarian",
+      "ingredients": ["Spinach", "Paneer", "Cream", "Spices"],
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlmYGdK7UW-_dmQ25ShlDJya2qowm68iXU2g&s",
+      "nutrition": {
+        "calories": 400,
+        "protein": 20,
+        "carbs": 15,
+        "fats": 25
+      }
+    },
+    {
+      "id": 4,
+      "name": "Fruit Chaat",
+      "category": "snack",
+      "diet": "vegetarian",
+      "ingredients": ["Apple", "Banana", "Pomegranate", "Spices"],
+      "image": "https://www.daringgourmet.com/wp-content/uploads/2024/01/Fruit-Chaat-Recipe-13.jpg",
+      "nutrition": {
+        "calories": 150,
+        "protein": 2,
+        "carbs": 35,
+        "fats": 1
+      }
+    },
+    {
+      "id": 5,
+      "name": "Vegan Pancakes",
+      "category": "breakfast",
+      "diet": "vegan",
+      "ingredients": ["Flour", "Almond Milk", "Banana", "Maple Syrup"],
+      "image": "https://www.veggiessavetheday.com/wp-content/uploads/2020/02/Easy-Vegan-Pancakes-FI-1200.jpg",
+      "nutrition": {
+        "calories": 300,
+        "protein": 6,
+        "carbs": 50,
+        "fats": 8
+      }
+    },
+    {
+      "id": 6,
+      "name": "Vegan Buddha Bowl",
+      "category": "lunch",
+      "diet": "vegan",
+      "ingredients": ["Quinoa", "Chickpeas", "Avocado", "Vegetables"],
+      "image": "https://cdn.loveandlemons.com/wp-content/uploads/2020/06/IMG_25456.jpg",
+      "nutrition": {
+        "calories": 500,
+        "protein": 18,
+        "carbs": 65,
+        "fats": 20
+      }
+    },
+    {
+      "id": 7,
+      "name": "Vegan Stir Fry",
+      "category": "dinner",
+      "diet": "vegan",
+      "ingredients": ["Tofu", "Broccoli", "Bell Peppers", "Soy Sauce"],
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUY6mskwhig6uArP-_JA0awEb7IMoV7dBhlQ&s",
+      "nutrition": {
+        "calories": 400,
+        "protein": 20,
+        "carbs": 40,
+        "fats": 15
+      }
+    },
+    {
+      "id": 8,
+      "name": "Vegan Smoothie",
+      "category": "snack",
+      "diet": "vegan",
+      "ingredients": ["Banana", "Spinach", "Almond Milk", "Chia Seeds"],
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/kale-smoothie-d06d559.jpg?quality=90&resize=400,363",
+      "nutrition": {
+        "calories": 200,
+        "protein": 5,
+        "carbs": 30,
+        "fats": 8
+      }
+    },
+    {
+      "id": 9,
+      "name": "Egg Omelette",
+      "category": "breakfast",
+      "diet": "non-vegetarian",
+      "ingredients": ["Eggs", "Onions", "Tomatoes", "Spices"],
+      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2024/06/egg-oats-omelette.jpg",
+      "nutrition": {
+        "calories": 250,
+        "protein": 15,
+        "carbs": 5,
+        "fats": 20
+      }
+    },
+    {
+      "id": 10,
+      "name": "Chicken Biryani",
+      "category": "lunch",
+      "diet": "non-vegetarian",
+      "ingredients": ["Chicken", "Rice", "Spices", "Yogurt"],
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP6AlsY64CMBtlrPiP137YFtHq-asKTix06Q&s",
+      "nutrition": {
+        "calories": 600,
+        "protein": 25,
+        "carbs": 80,
+        "fats": 20
+      }
+    },
+    {
+      "id": 11,
+      "name": "Fish Curry",
+      "category": "dinner",
+      "diet": "non-vegetarian",
+      "ingredients": ["Fish", "Coconut Milk", "Spices", "Tomatoes"],
+      "image": "https://img-global.cpcdn.com/recipes/60d5fd12b008e7f5/680x482cq70/%E0%A4%AC%E0%A4%B9%E0%A4%B0-%E0%A4%B8%E0%A4%9F%E0%A4%87%E0%A4%B2-%E0%A4%AB%E0%A4%B6-%E0%A4%95%E0%A4%B0-bihari-style-fish-curry-recipe-in-hindi-%E0%A4%B0%E0%A4%B8%E0%A4%AA-%E0%A4%AE%E0%A4%96%E0%A4%AF-%E0%A4%A4%E0%A4%B8%E0%A4%B5%E0%A4%B0.jpg",
+      "nutrition": {
+        "calories": 450,
+        "protein": 30,
+        "carbs": 10,
+        "fats": 30
+      }
+    },
+    {
+      "id": 12,
+      "name": "Chicken Salad",
+      "category": "snack",
+      "diet": "non-vegetarian",
+      "ingredients": ["Chicken", "Lettuce", "Tomatoes", "Cucumber"],
+      "image": "https://www.allrecipes.com/thmb/aPy_MqN4GgyO27vh98ns1pXaIWg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/8499-Best-Chicken-Salad-DDMFS-3X4-11915-d36a5b98b1e041b3b48b62ecdfa6029e.jpg",
+      "nutrition": {
+        "calories": 200,
+        "protein": 20,
+        "carbs": 5,
+        "fats": 10
+      }
+    },
+    {
+      "id": 13,
+      "name": "Poha",
+      "category": "breakfast",
+      "diet": "vegetarian",
+      "ingredients": ["Flattened Rice", "Peanuts", "Onions", "Spices"],
+      "image": "https://www.cookwithmanali.com/wp-content/uploads/2014/08/Poha-Recipe.jpg",
+      "nutrition": {
+        "calories": 300,
+        "protein": 6,
+        "carbs": 50,
+        "fats": 8
+      }
+    },
+    {
+      "id": 14,
+      "name": "Rajma Chawal",
+      "category": "lunch",
+      "diet": "vegetarian",
+      "ingredients": ["Kidney Beans", "Rice", "Tomatoes", "Spices"],
+      "image": "https://harpalssokhi.com/wp-content/uploads/2021/09/ramja-chawal.jpg",
+      "nutrition": {
+        "calories": 500,
+        "protein": 18,
+        "carbs": 65,
+        "fats": 20
+      }
+    },
+    {
+      "id": 15,
+      "name": "Vegetable Biryani",
+      "category": "dinner",
+      "diet": "vegetarian",
+      "ingredients": ["Rice", "Mixed Vegetables", "Spices", "Yogurt"],
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRisPmikxtyKe5ypu93a5iIVN4FvrmaP3t6cg&s",
+      "nutrition": {
+        "calories": 400,
+        "protein": 10,
+        "carbs": 70,
+        "fats": 12
+      }
+    },
+    {
+      "id": 16,
+      "name": "Vegan Oatmeal",
+      "category": "breakfast",
+      "diet": "vegan",
+      "ingredients": ["Oats", "Almond Milk", "Berries", "Maple Syrup"],
+      "image": "https://www.veggiesdontbite.com/wp-content/uploads/2020/04/vegan-oatmeal-recipe-FI.jpg",
+      "nutrition": {
+        "calories": 250,
+        "protein": 8,
+        "carbs": 40,
+        "fats": 6
+      }
+    },
+    {
+      "id": 17,
+      "name": "Vegan Tacos",
+      "category": "lunch",
+      "diet": "vegan",
+      "ingredients": ["Tortillas", "Black Beans", "Avocado", "Salsa"],
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt6L6Uo1D--lkYW5mnVAUUk8AtvlsIM5GV1w&s",
+      "nutrition": {
+        "calories": 400,
+        "protein": 12,
+        "carbs": 50,
+        "fats": 15
+      }
+    },
+    {
+      "id": 18,
+      "name": "Vegan Lentil Soup",
+      "category": "dinner",
+      "diet": "vegan",
+      "ingredients": ["Lentils", "Carrots", "Celery", "Tomatoes"],
+      "image": "https://www.eatingwell.com/thmb/AZdGSagOj8VtZPnpcVdD8ttRk3k=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/vegan-lentil-stew-0b016185b40446ba98409c75dfeaef7f.jpg",
+      "nutrition": {
+        "calories": 300,
+        "protein": 15,
+        "carbs": 40,
+        "fats": 5
+      }
+    },
+    {
+      "id": 19,
+      "name": "Scrambled Eggs",
+      "category": "breakfast",
+      "diet": "non-vegetarian",
+      "ingredients": ["Eggs", "Cheese", "Tomatoes", "Herbs"],
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMtVvNgo5vzlE6ciikKYlJjhuAvTk77YiUZQ&s",
+      "nutrition": {
+        "calories": 300,
+        "protein": 20,
+        "carbs": 5,
+        "fats": 22
+      }
+    },
+    {
+      "id": 20,
+      "name": "Grilled Chicken",
+      "category": "lunch",
+      "diet": "non-vegetarian",
+      "ingredients": ["Chicken Breast", "Olive Oil", "Herbs", "Lemon"],
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToMozkkZv6pQonP3nn1BlXT2uLTWJxeshxYA&s",
+      "nutrition": {
+        "calories": 350,
+        "protein": 40,
+        "carbs": 0,
+        "fats": 18
+      }
+    },
+    {
+      "id": 21,
+      "name": "Protein Shake",
+      "category": "snack",
+      "diet": "non-vegetarian",
+      "ingredients": ["Whey Protein", "Milk", "Banana", "Peanut Butter"],
+      "image": "https://thebigmansworld.com/wp-content/uploads/2024/09/protein-shakes.jpg",
+      "nutrition": {
+        "calories": 300,
+        "protein": 30,
+        "carbs": 20,
+        "fats": 10
+      }
+    },
+    {
+      "id": 22,
+      "name": "Paneer Tikka",
+      "category": "lunch",
+      "diet": "vegetarian",
+      "ingredients": ["Paneer", "Yogurt", "Spices", "Bell Peppers", "Onions"],
+      "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fspicecravings.com%2Fpaneer-tikka&psig=AOvVaw2rHnmKsCJD8TmLOCLrbSAJ&ust=1738947317858000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMiM9NvBr4sDFQAAAAAdAAAAABAE",
+      "nutrition": {
+        "calories": 350,
+        "protein": 18,
+        "carbs": 10,
+        "fats": 22
+      }
+    },
+    {
+      "id": 23,
+      "name": "Dal Makhani",
+      "category": "dinner",
+      "diet": "vegetarian",
+      "ingredients": ["Black Lentils", "Kidney Beans", "Butter", "Cream", "Spices"],
+      "image": "https://i.ytimg.com/vi/M7nvJN0vQ3g/sddefault.jpg",
+      "nutrition": {
+        "calories": 500,
+        "protein": 20,
+        "carbs": 60,
+        "fats": 20
+      }
+    },
+    {
+      "id": 24,
+      "name": "Aloo Paratha",
+      "category": "breakfast",
+      "diet": "vegetarian",
+      "ingredients": ["Wheat Flour", "Potatoes", "Spices", "Ghee"],
+      "image": "https://static.toiimg.com/photo/53109843.cms",
+      "nutrition": {
+        "calories": 400,
+        "protein": 8,
+        "carbs": 65,
+        "fats": 15
+      }
+    },
+    {
+      "id": 25,
+      "name": "Vegetable Pasta",
+      "category": "lunch",
+      "diet": "vegetarian",
+      "ingredients": ["Pasta", "Tomatoes", "Bell Peppers", "Olive Oil", "Basil"],
+      "image": "https://www.funfoodfrolic.com/wp-content/uploads/2021/01/Stir-Fry-Pasta-Thumbnail.jpg",
+      "nutrition": {
+        "calories": 450,
+        "protein": 12,
+        "carbs": 70,
+        "fats": 10
+      }
+    },
+    {
+      "id": 26,
+      "name": "Mushroom Risotto",
+      "category": "dinner",
+      "diet": "vegetarian",
+      "ingredients": ["Rice", "Mushrooms", "Vegetable Broth", "Onions", "Parmesan Cheese"],
+      "image": "https://www.eatingwell.com/thmb/j7BysZSxkHk2zCmnHUjSwwqrX4Y=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/mushroom-risotto-beauty-8025316-4000x2700-33aa288ff4ce4b8d854618fab2109a95.jpg",
+      "nutrition": {
+        "calories": 500,
+        "protein": 15,
+        "carbs": 65,
+        "fats": 18
+      }
+    }
+  ]
+}

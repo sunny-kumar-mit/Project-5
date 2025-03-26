@@ -1,0 +1,789 @@
+:root {
+  --primary-color: #6a11cb;
+  --secondary-color: #2575fc;
+  --accent-color: #ff6f61;
+  --background-color: #1a1a1a;
+  --text-color: #ffffff;
+  --card-bg: #2a2a2a;
+  --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  --neon-glow: 0 0 10px rgba(106, 17, 203, 0.8), 0 0 20px rgba(37, 117, 252, 0.6);
+}
+
+/* ------------------- Global Styles ------------------- */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at center, #2a2a2a, #1a1a1a);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+/* ------------------- Cosmic Header Styles ------------------- */
+header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  padding: 4rem;
+  text-align: center;
+  box-shadow: var(--card-shadow);
+  position: relative;
+  overflow: hidden;
+  animation: cosmicEntrance 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 1;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="white" opacity="0.5"/></svg>');
+  background-size: 20px 20px;
+  opacity: 0.1;
+  animation: twinkle 10s linear infinite;
+}
+
+@keyframes cosmicEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px) scale(0.95);
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 0.3; }
+}
+
+header h1 {
+  font-size: 4.5rem;
+  margin: 0;
+  background: linear-gradient(90deg, #fff, #ffd700, #ff6f61);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: 
+    shine 4s infinite linear,
+    float 5s ease-in-out infinite;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+  position: relative;
+  z-index: 2;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+header p {
+  font-size: 1.8rem;
+  margin: 1.5rem 0 0;
+  opacity: 0;
+  animation: 
+    subtitleEntrance 1.2s ease 0.6s forwards,
+    glow 3s ease-in-out infinite;
+  color: rgba(255, 255, 255, 0.95);
+  position: relative;
+  z-index: 2;
+  font-weight: 300;
+}
+
+@keyframes shine {
+  0% { background-position: -200%; }
+  100% { background-position: 200%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes subtitleEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 10px rgba(255,255,255,0.5); }
+  50% { text-shadow: 0 0 20px rgba(255,255,255,0.8); }
+}
+
+/* ------------------- Floating Particles ------------------- */
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  animation: floatParticle linear infinite;
+}
+
+@keyframes floatParticle {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(20px);
+    opacity: 0;
+  }
+}
+
+/* ------------------- Main Content Styles ------------------- */
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+/* ------------------- Sticky "Create Your Plan" Box ------------------- */
+#user-input {
+  background: var(--card-bg);
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  border-radius: 20px;
+  box-shadow: var(--card-shadow), var(--neon-glow);
+  position: sticky;
+  top: 20px;
+  z-index: 10;
+  animation: fadeInUp 1s cubic-bezier(0.22, 1, 0.36, 1);
+  border: 1px solid rgba(106, 17, 203, 0.3);
+  transition: all 0.5s ease;
+}
+
+#user-input:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 
+              0 0 20px rgba(106, 17, 203, 0.8),
+              0 0 30px rgba(37, 117, 252, 0.6);
+  transform: translateY(-5px);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ------------------- Meal Plan Section Styles ------------------- */
+#meal-plan {
+  background: var(--card-bg);
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  border-radius: 20px;
+  box-shadow: var(--card-shadow);
+  animation: fadeInUp 1.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+#meal-plan::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  animation: borderGrow 1.5s ease;
+}
+
+@keyframes borderGrow {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+#meal-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+/* ------------------- Holographic Meal Card Styles ------------------- */
+.meal-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+  animation: cardAppear 0.8s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+@keyframes cardAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) rotateX(15deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+  }
+}
+
+.meal-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(106, 17, 203, 0.2) 0%,
+    rgba(37, 117, 252, 0.2) 50%,
+    rgba(255, 111, 97, 0.2) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 1;
+}
+
+.meal-card:hover {
+  transform: translateY(-15px) scale(1.03) rotateY(5deg);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6),
+              0 0 15px rgba(106, 17, 203, 0.4);
+}
+
+.meal-card:hover::before {
+  opacity: 1;
+}
+
+.meal-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--accent-color);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  animation: bounce 1.5s infinite, pulse 2s infinite;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-transform: capitalize;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); }
+  50% { box-shadow: 0 4px 20px rgba(255, 111, 97, 0.6); }
+}
+
+.meal-image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-bottom: 5px solid var(--secondary-color);
+  transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+  z-index: 0;
+}
+
+.meal-card:hover .meal-image {
+  transform: scale(1.1);
+  filter: brightness(1.15) contrast(1.1);
+}
+
+.meal-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.meal-content h3 {
+  font-size: 1.6rem;
+  margin: 0;
+  color: var(--text-color);
+  animation: slideInLeft 0.6s ease;
+  font-weight: 600;
+}
+
+.nutrition-facts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+  margin: 1.5rem 0;
+}
+
+.nutrition-item {
+  background: rgba(51, 51, 51, 0.7);
+  padding: 1.2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nutrition-item:hover {
+  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+  color: white;
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(37, 117, 252, 0.4);
+}
+
+.nutrition-item span {
+  display: block;
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 0.8rem;
+  font-weight: 300;
+}
+
+/* ------------------- Alternative Meals Section Styles ------------------- */
+#alternative-meals {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+#alternative-meals::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+  animation: borderGlow 3s infinite;
+}
+
+@keyframes borderGlow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.alternative-heading {
+  color: var(--accent-color);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  animation: slideInLeft 1s ease;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+.alternative-heading::before,
+.alternative-heading::after {
+  content: '✦';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--secondary-color);
+  animation: spin 4s linear infinite;
+}
+
+.alternative-heading::before {
+  left: -20px;
+}
+
+.alternative-heading::after {
+  right: -20px;
+}
+
+@keyframes spin {
+  0% { transform: translateY(-50%) rotate(0deg); }
+  100% { transform: translateY(-50%) rotate(360deg); }
+}
+
+.alternative-meals .meal-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.alternative-meals .meal-card {
+  max-width: 100%;
+  margin: 0;
+}
+
+/* ------------------- Form Styles ------------------- */
+.form-group {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  margin: 1.5rem 0;
+  background: #444;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  outline: none;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+input[type='range']::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 15px rgba(106, 17, 203, 0.8);
+}
+
+input[type='range']:hover {
+  background: #555;
+}
+
+.form-group select {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(42, 42, 42, 0.8);
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+}
+
+.form-group select:hover {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 10px rgba(37, 117, 252, 0.3);
+}
+
+.form-group select:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 15px rgba(255, 111, 97, 0.4);
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"] {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(42, 42, 42, 0.8);
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="number"]:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 10px rgba(37, 117, 252, 0.3);
+  background: rgba(51, 51, 51, 0.9);
+}
+
+.form-group input[type="text"]::placeholder,
+.form-group input[type="number"]::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+}
+
+.form-group input[type="text"]:hover,
+.form-group input[type="number"]:hover {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 15px rgba(255, 111, 97, 0.4);
+}
+
+/* ------------------- Holographic Button Styles ------------------- */
+button {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: white;
+  padding: 1.5rem 3rem;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.2rem;
+  transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  width: 100%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  animation: buttonShine 3s infinite;
+}
+
+@keyframes buttonShine {
+  0% { transform: translateX(-100%) rotate(30deg); }
+  100% { transform: translateX(100%) rotate(30deg); }
+}
+
+button:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 
+              0 0 20px rgba(106, 17, 203, 0.8),
+              0 0 30px rgba(255, 111, 97, 0.6);
+  background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+}
+
+button:active {
+  transform: scale(0.98) translateY(0);
+}
+
+/* ------------------- Cosmic Footer Styles ------------------- */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #200433, #1a1a1a);
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.9rem;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 1.5s ease;
+  z-index: 100;
+  backdrop-filter: blur(5px);
+  border-top: 1px solid rgba(106, 17, 203, 0.3);
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
+}
+
+/* ------------------- Nutrition Summary Styles ------------------- */
+.nutrition-summary {
+  background: rgba(42, 42, 42, 0.8);
+  padding: 2rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nutrition-summary h3 {
+  margin-top: 0;
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.calorie-difference {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background: rgba(51, 51, 51, 0.7);
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.1rem;
+  animation: pulse 2s infinite;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.calorie-difference.over {
+  color: #ff6f61;
+  background: rgba(255, 111, 97, 0.1);
+  border-color: rgba(255, 111, 97, 0.3);
+}
+
+.calorie-difference.under {
+  color: #6a11cb;
+  background: rgba(106, 17, 203, 0.1);
+  border-color: rgba(106, 17, 203, 0.3);
+}
+
+/* ------------------- Enhanced Recommendation Section ------------------- */
+#recommendation {
+  background: linear-gradient(135deg, rgba(42, 42, 42, 0.9), rgba(51, 51, 51, 0.9));
+  padding: 3rem;
+  margin-top: 3rem;
+  border-radius: 20px;
+  box-shadow: var(--card-shadow);
+  animation: fadeInUp 1.5s ease;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+#recommendation::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="white" opacity="0.05"/></svg>');
+  background-size: 30px 30px;
+  animation: twinkle 15s linear infinite;
+}
+
+#recommendation h2 {
+  color: var(--accent-color);
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  animation: slideInLeft 1s ease;
+  position: relative;
+  display: inline-block;
+}
+
+#recommendation h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  animation: underlineGrow 1.5s ease;
+}
+
+@keyframes underlineGrow {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+#recommendation ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#recommendation li {
+  margin-bottom: 1.5rem;
+  animation: fadeIn 0.8s ease;
+  position: relative;
+  padding-left: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+#recommendation li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+  animation: pulse 2s infinite;
+}
+
+/* ------------------- Responsive Adjustments ------------------- */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 3rem;
+  }
+  
+  header p {
+    font-size: 1.4rem;
+  }
+  
+  #meal-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .nutrition-facts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .alternative-meals .meal-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ------------------- Utility Animations ------------------- */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
